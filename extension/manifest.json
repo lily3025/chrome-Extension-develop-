@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "POI获取",
+  "description": "从高德获取一个地点的POI",
+  "version": "1.0",
+
+  "permissions": [
+    "webRequest",
+    "http://restapi.amap.com/*",
+	"http://restapi.map.haosou.com/*"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.amap.com/*"],
+      "css": ["content-amap.css"],
+      "js": ["183.js", "content-amap.js"]
+    },
+    {
+      "matches": ["http://lili.audit.platform.mashangmai.corp.qihoo.net/*", "http://qadminengine.corp.qihoo.net/*/Home/Guangjiebao/*"],
+      "js": ["183.js", "content-haosou.js"]
+    }
+  ]
+}
