@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "my first extension",
+    "description": "my first extension",
+    "browser_action": {
+        "default_icon": "calendar.png",
+        "default_popup": "test.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
